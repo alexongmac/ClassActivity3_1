@@ -15,7 +15,7 @@ resource "aws_s3_bucket" "alex_s3_buc" {
 
   tags = {
     Name        = "alex-31"
-    Environment = "Dev"
+    Environment = "Dev-31"
   }
 }
 
