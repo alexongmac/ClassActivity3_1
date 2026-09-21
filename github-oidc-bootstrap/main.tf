@@ -17,6 +17,12 @@ data "aws_iam_policy_document" "github_trust" {
       variable = "token.actions.githubusercontent.com:sub"
       values   = ["repo:${var.github_repository_username}/${var.github_repository_name}:*"]
     }
+
+    condition {
+      test     = "StringEquals"
+      variable = "token.actions.githubusercontent.com:aud"
+      values   = ["sts.amazonaws.com"]
+    }
   }
 }
 
