@@ -1,7 +1,7 @@
 terraform {
   backend "s3" {
     bucket = "sctp-tfstate-ce13"
-    key    = "alex_s3/alex-31-terraform.tfstate"
+    key    = "alex-31-terraform.tfstate"
     region = "us-east-1"
   }
 }
